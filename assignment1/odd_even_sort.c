@@ -67,7 +67,7 @@ void OddEvenSort (int *arr, int N){
     at the particular iteration */
     while(flag || start){
         flag = 0;
-        #pragma omp parallel for private(temp,i,flag) shared(arr)
+        // #pragma omp parallel for private(temp,i,flag) shared(arr)
         for(i=start; i<N-1; i+=2){
             if(arr[i] > arr[i+1]){
                 temp = arr[i];
